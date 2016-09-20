@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function() {
   function getSearchResults(term) {
     // `fetch` is used to make AJAX requests to receive data from other servers on the web
     // We're generating our search URL which would end up similar to "http://www.omdbapi.com/?type=movie&s=Frozen"
-    fetch('http://www.omdbapi.com/?type=movie&s=' + term)
+    fetch('https://www.omdbapi.com/?type=movie&s=' + term)
       // First we must format the response so we can work with it
       .then(function(response) {
         return response.json();
@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // Get details for a specific movie
   function getItemDetails(imdbID) {
     // Using an imdbID we can get the exact item we want
-    fetch('http://www.omdbapi.com/?i=' + imdbID)
+    fetch('https://www.omdbapi.com/?i=' + imdbID)
       .then(function(response) {
         return response.json();
       })
