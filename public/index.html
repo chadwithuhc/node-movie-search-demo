@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="nav-main">
+    <ul class="nav-main-wrapper">
+      <li class="nav-main-item"><a href="#search" class="nav-main-link">Search for Movies</a></li>
+      <li class="nav-main-item"><a id="favorites-link" href="#favorites" class="nav-main-link">Favorites</a></li>
+    </ul>
+  </nav>
+  <main>
+    <form id="search-form" class="search-form search-form-full-width">
+      <label for="search-form-input" class="search-form-label">Search by Movie Title</label>
+      <!-- Adding `required` to our input will run browser HTML5 validation -->
+      <input id="search-form-input" class="search-form-input" type="text" required />
+      <button class="button search-form-button">Search</button>
+    </form>
+    <ul id="search-results" class="search-results">
+      <!-- Search results will be injected here -->
+    </ul>
+    <div id="item-detail">
+      <!-- Movie details will be injected here -->
+    </div>
+  </main>
+  
+  <section id="favorites" class="favorites">
+    <a id="favorites-link-close" href="#favorites" class="favorites-close-link">Close</a>
+    <h2 class="favorites-title">Favorites</h2>
+    <ul id="favorites-list" class="favorites-list">
+      <!-- Favorites will be injected here -->
+    </ul>
+  </section>
+  
+  <!-- HTML template inside script tag will not be run by browser -->
+  <!--
+    The `data-imdbID` attribute on our element allows us to pass data through attributes
+    This is great when we need to retrieve that information via JavaScript later
+    which we will be doing for showing details on a specific result
+   -->
+  <script id="search-result-template" type="text/template">
+    <li class="search-results-item" data-imdbID="{imdbID}">
+      <img class="search-results-item-image" src="{posterUrl}" />
+      <h2 class="search-results-item-title">{title} ({year})</h2>
+    </li>
+  </script>
+  
+  <!-- HTML template for movie details, shown when clicking on a movie result -->
+  <script id="item-detail-template" type="text/template">
+    <div class="item-detail-wrapper">
+      <img class="item-detail-image" src="{posterUrl}" />
+      <div class="item-detail-inline-group">
+        <h2 class="item-detail-title">{title} ({year})
+          <button class="button add-to-favorites"
+                  data-imdbID="{imdbID}"
+                  data-poster-url="{posterUrl}"
+                  data-title="{title}"
+                  data-year="{year}">{favoritesButtonText}</button></h2>
+        <ul class="item-detail-metadata">
+          <li class="item-detail-metadata-item"><strong>Rated:</strong> {rated}</li>
+          <li class="item-detail-metadata-item"><strong>Runtime:</strong> {runtime}</li>
+          <li class="item-detail-metadata-item"><strong>IMDB Rating:</strong> {imdbRating}</li>
+          <li class="item-detail-metadata-item"><strong>IMDB Votes:</strong> {imdbVotes}</li>
+        </ul>
+        <p class="item-detail-plot">{plot}</p>
+      </div>
+    </div>
+  </script>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

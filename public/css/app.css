@@ -1,0 +1,135 @@
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.nav-main {
+  text-align: center;
+}
+.nav-main-wrapper {
+  padding-left: 0;
+}
+.nav-main-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 1em;
+}
+.nav-main-link {
+  font-size: 1.4em;
+  color: dodgerblue;
+  text-decoration: none;
+  border-bottom: solid 1px dodgerblue;
+}
+
+.search-form-full-width {
+  display: block;
+  background: #eee;
+  padding: 1em;
+  text-align: center;
+}
+.search-form-full-width .search-form-input,
+.search-form-full-width .search-form-button {
+  font-size: 2em;
+  padding: 0.6em;
+}
+.search-form-label {
+  text-transform: uppercase;
+  font-size: 1em;
+  display: block;
+  margin: 0 0 1em;
+  color: #666;
+  letter-spacing: 2px;
+}
+
+.button {
+  background: none;
+  border: solid 1px dodgerblue;
+  border-radius: 4px;
+  color: dodgerblue;
+}
+
+.search-results {
+  font-size: 0; /* Fix for display: inline-block of children */
+  text-align: center;
+  margin-bottom: 200px; /* Allow spacing for scrolling when movie details are shown */
+}
+.search-results-item {
+  display: inline-block;
+  border: solid 1px #ccc;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  text-align: center;
+}
+.search-results-item-image {
+  height: 100px;
+  display: inline-block;
+}
+.search-results-item-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+#item-detail {
+  background: #ccc;
+  pading: 0.2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.item-detail-image {
+  height: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+.item-detail-inline-group {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 2%;
+  max-width: 80%;
+}
+.item-detail-metadata {
+  list-style: none;
+  padding-left: 0;
+}
+.item-detail-metadata-item {
+  display: inline-block;
+  margin-right: 1em;
+}
+.item-detail-plot {
+  margin-bottom: 0;
+}
+
+.favorites {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  display: none;
+  text-align: center;
+}
+.favorites-list {
+  padding-left: 0;
+}
+.favorites-title {
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #666;
+  letter-spacing: 2px;
+}
+.favorites-close-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4em;
+  color: dodgerblue;
+  text-decoration: none;
+  border-bottom: solid 1px dodgerblue;
+  margin: 0.4em;
+}
