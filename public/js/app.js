@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // A great way to see how the response data is formatted is to use a `console.log()` statement
         // APIs will return the data on varying property names
         // Try opening the developer console in Chrome and inspecting the result by clicking down arrows on various data objects
-        console.log('responseData', responseData)
+        console.log('responseData', responseData);
         
         // This response has all of its results on a `Search` property
         var results = responseData.Search;
@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', function() {
       })
       .then(function(responseData) {
         // Again, inspecting the result to see what properties are available
-        console.log('responseData', responseData)
+        console.log('responseData', responseData);
 
         // This response has all of its properties directly on the object, so let's just pass that
         renderItemDetails(responseData);
